@@ -1,0 +1,85 @@
+.launch-card.card {
+    border: none;
+    border-radius: 0;
+}
+
+.launch-card:hover .card-body {
+    padding-top: 7em;
+    background-color: #FFF;
+    border: 0.3em solid #f4f4f4;
+}
+
+.launch-card .card-body {
+    padding-top: 7em;
+    padding-bottom: 3em;
+    background-color: #f4f4f4;
+}
+.launch-card .card-product {
+    padding-bottom: 2em;
+    transition: font-size 500ms ease-out;
+}
+.launch-card:hover .card-product {
+    font-size: 1.2em;
+}
+
+.launch-card .card-title {
+    font-size: 2.5em;
+}
+
+.launch-card .card-text{
+    font-size: 1.5em;
+}
+.launch-card:hover img {
+    top: 3.5em
+}
+
+.launch-card img {
+    position: relative;
+    border-radius: 0;
+    top: 4em;
+    margin-top: -3em;
+    width: 10vw;
+    height: 15vw;
+    object-fit: contain;
+    margin-left: auto;
+    margin-right: auto;
+    transition: top 500ms ease-out;
+}
+
+.launch-card:hover .btn {
+    color: #FFF;
+    background-color: #68C5BC;
+    border: #68C5BC;
+}
+
+.launch-card .btn {    
+    padding: 0.7rem 1.8em;
+    color: white;
+    background-color: #646464;
+    border-color: #424242;
+    border-radius: 0;
+    font-size: .9rem;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .launch-card img{
+        width: 80vw;
+        height: 40vw;
+    }
+}
+
+
+@media only screen and (min-width: 2400px) {
+    .launch-card .card-body {
+        padding-top: 12em;
+        padding-bottom: 6em;
+    }
+    .launch-card .card-product {
+        padding-bottom: 7em;
+    }
+    .launch-card:hover .card-body {
+        padding-top: 13em;
+    }
+
+}

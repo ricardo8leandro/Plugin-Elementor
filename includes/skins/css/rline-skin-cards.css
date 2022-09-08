@@ -1,0 +1,90 @@
+.blog-card {
+    border-radius: 0!important;
+    border: none!important;
+    margin-bottom: 2em!important;
+}
+.blog-card:hover img {
+    filter: brightness(1);
+    transform: scale(1.05);
+}
+.blog-card .card-img-top{
+    overflow: hidden;
+    border-radius: 0!important;
+}
+.blog-card img{
+    border-radius: 0;
+    width: 100%;
+    height: 20vh;
+    object-fit: cover;
+    transition: filter 250ms ease-in, transform 250ms ease-in;
+}
+.blog-card .card-body{
+    padding-top: 1.5em;
+    padding-left: 5%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.blog-card hr {
+    border-color: #68C5BC;
+    opacity: 1;
+    width: 50%;
+    margin-bottom: 0;
+}
+
+.blog-post-meta .elementor-post__meta-data {
+    font-size: 0.75em!important;
+    color: #000!important;
+    text-transform: uppercase!important;
+    font-weight: 200!important;
+    margin-bottom: 0!important}
+
+.blog-post-title {
+    margin-top: .5em!important;
+    margin-bottom: 1em!important;
+    font-weight: 300!important;
+    text-transform: inherit!important;
+    font-size: 1.5em!important;
+    color: #000!important;
+}
+
+.blog-post-button {
+    position: relative;
+    background-color: #646464!important;
+    fill: #FFF;
+    padding: .5em!important;
+    bottom: 0;
+    top: 2.5em;
+    border-radius: 0!important;
+    border: none!important;
+}
+.blog-card:hover .blog-post-button{
+    background-color: #68C5BC!important;
+}
+.blog-more-posts{
+    margin-top: 5em;
+    margin-bottom: 5em;
+    border: none;
+    border-radius: 0;
+    color: #FFF;
+    background-color: #68C5BC;
+    padding: .5em 1em;
+}
+
+
+@media only screen and (min-width: 2400px) {
+    
+    .blog-post-title {
+        font-size: 2em!important;
+    }
+    
+    .blog-post-meta .elementor-post__meta-data {
+        font-size: 1.2em!important;
+    }
+    
+    .blog-card img{
+        height: 30vh;
+    }
+}

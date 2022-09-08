@@ -1,0 +1,165 @@
+.home-carousel-control {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+.home-carousel-control button {
+    background-color: #68C5BC;
+    border: none;
+    padding: 0.5em;
+    margin-top: 0.5px;
+    border-radius: 0;
+}
+
+.home-carousel-control button:hover {
+    background-color: #68C5BC;
+}
+
+.carousel-title {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding-right: 15%;
+}
+
+.home-carousel-item .carousel-title h2 {
+    font-size: 4em;
+    color: #FFF;
+}
+
+.home-carousel-indicators {
+    left: auto;
+    margin-right: 5%;
+    margin-bottom: 3rem;
+}
+
+.home-carousel-indicators [data-bs-target] {
+    position: relative;
+    background-color: #6c6c6c;
+    width: 100px;
+    height: 3px;
+    border: none;
+    margin: 0;
+    text-indent: 0;
+    opacity: 1;
+    border-radius: 0;
+}
+
+.home-carousel-indicators [data-bs-target] p {
+    margin-top: -30px;
+    color: #FFF;
+    font-size: 1.1em;
+    position: absolute;
+    width: 100px;
+}
+
+.home-carousel-indicators [data-bs-target]:first-child p {
+    text-align: left;
+}
+
+.home-carousel-indicators [data-bs-target]:last-child p {
+    text-align: right;
+}
+
+.home-carousel-indicators [data-bs-target] span {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #68C5BC;
+    border-radius: 0;
+}
+
+.home-carousel-item img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(0.6);
+}
+
+.home-carousel-control button {
+    padding: 15px;
+}
+
+.home-carousel-control svg {
+    fill: #FFF;
+}
+
+.home-carousel-item .carousel-title h2 {
+    display: none;
+}
+
+.home-carousel-item.active .carousel-title h2 {
+    -webkit-animation: homeCarouselFadeInRight 1s normal forwards;
+    ;
+    animation: homeCarouselFadeInRight 1s normal forwards;
+    display: block;
+}
+
+@media only screen and (max-width: 576px) {
+    .home-carousel-control {
+        display: none;
+    }
+
+    .home-carousel-item .carousel-title {
+        text-align: center;
+        justify-content: center;
+        padding-right: 0;
+    }
+
+    .home-carousel-indicators {
+        left: 0;
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+
+    .home-carousel-indicators [data-bs-target] p {
+        font-size: 0.8em;
+    }
+
+    .home-carousel-item.active .carousel-title h2 {
+        -webkit-animation: homeCarouselFadeInUp 1s normal forwards;
+        animation: homeCarouselFadeInUp 1s normal forwards;
+    }
+    .home-carousel-item img {
+        height: 90vh;
+    }
+
+}
+
+@keyframes homeCarouselFadeInRight {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(100%, 0, 0);
+        transform: translate3d(100%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes homeCarouselFadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}

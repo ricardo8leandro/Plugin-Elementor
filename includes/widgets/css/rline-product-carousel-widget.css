@@ -1,0 +1,138 @@
+.product-text {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background-color: #FFF;
+    color: #d3d3d3;
+}
+
+.product-text p {
+    position: relative;
+    left: 5vw;
+    font-size: 5vw;
+    line-height: 6vw;
+    font-weight: 300;
+}
+
+.product-space {
+    padding-top: 1rem;
+    background-color: #86786b;
+    display: flex;
+    justify-content: space-between;
+    height: 30vw;
+}
+
+.product-space h3 {
+    margin-top: 1vw;
+    margin-left: 1.5vw;
+    color: #FFF;
+    font-weight: 300;
+}
+
+.product-space .d-flex {
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 3vw;
+}
+
+.product-space .btn {
+    margin-top: auto;
+    margin-bottom: 3vw;
+    background-color: #86786b;
+    border-radius: 0;
+    border-color: #FFF;
+    padding: 0.7rem 1.8em;
+    font-weight: 300;
+    color: #FFF;
+}
+
+.product-space .carousel-control-next {
+    flex-grow: 1;
+    position: initial;
+    width: auto;
+    fill: #FFF;
+    opacity: 1;
+}
+.product-space .carousel-control-next:hover,
+.product-space .carousel-control-next:focus{
+    background-color: transparent;
+}
+.product-image {
+    position: relative;
+    object-fit: contain;
+    max-width: 25vw !important;
+    top: 2rem;
+}
+
+.carousel-ballast {
+    background-color: #e8e8e8;
+    height: 20vh;
+}
+
+@media only screen and (max-width: 767px) {
+    .product-space {
+        height: 60vw;
+    }
+
+    .product-text {
+        justify-content: center;
+        align-items: flex-end;
+        height: 20vh;
+    }
+
+    .product-image {
+        width: 60vw;
+    }
+
+    .product-text p {
+        left: auto;
+        top: 10vw;
+        font-size: 10vw;
+        line-height: 10vw;
+    }
+}
+
+.carousel-item .product-text p,
+.carousel-item img.product-image {
+    visibility: hidden;
+}
+
+.carousel-item.active .product-text p {
+    -webkit-animation: productCarouselFadeInLeft 1s normal forwards;
+    animation: productCarouselFadeInLeft 1s normal forwards;
+    visibility: visible;
+}
+
+.carousel-item.active img.product-image {
+    -webkit-animation: productCarouselFadeInRight 1s normal forwards;
+    animation: productCarouselFadeInRight 1s normal forwards;
+    visibility: visible;
+}
+
+@keyframes productCarouselFadeInLeft {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(-10%, 0, 0);
+        transform: translate3d(-10%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes productCarouselFadeInRight {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(10%, 0, 0);
+        transform: translate3d(10%, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}

@@ -8,11 +8,11 @@
 
 * Description: Nessessário para o funcionamento dos elementos do Elementor
 
-* Author: Jonatas Arão
+* Author: Ricardo Leandro
 
 * Version: 1.0
 
-* Author URI: http://github.com/Jonatas-Arao/
+* Author URI: 
 
 */
 
